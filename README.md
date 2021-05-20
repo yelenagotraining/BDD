@@ -1,2 +1,2 @@
 # BDD
-Books written by BDD Creator. 
+Books written by creator of BDD approach. 
