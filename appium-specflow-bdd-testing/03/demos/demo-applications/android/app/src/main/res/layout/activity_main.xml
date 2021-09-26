@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="ifContentScrolls"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingEnd="20dp">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="21dp" />
+
+            <TextView
+                android:id="@+id/guestInformationLabel"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:text="Guest Information"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/numberOfGuests"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:ems="10"
+                android:hint="Number of Guests"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/venueInformationLabel"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:text="Venue Information"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/venue"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:entries="@array/venues"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:id="@+id/serviceLevel"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:entries="@array/serviceLevels"
+                android:spinnerMode="dropdown" />
+
+            <Switch
+                android:id="@+id/promotionIncluded"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:paddingStart="8dp"
+                android:text="Promotion Included" />
+
+            <TextView
+                android:id="@+id/paymentInformationLabel"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:text="Payment Information"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold" />
+
+            <Switch
+                android:id="@+id/upfrontPayment"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:checked="false"
+                android:text="Upfront Payment" />
+
+            <EditText
+                android:id="@+id/upfrontPaymentPercentage"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:ems="10"
+                android:hint="% Upfront Payment"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <TextView
+                android:id="@+id/resultLabel"
+                android:layout_width="371dp"
+                android:layout_height="wrap_content"
+                android:text="Result"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="293dp"
+                    android:layout_height="46dp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp" />
+
+            <Button
+                android:id="@+id/calculateBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calculate" />
+
+            <Button
+                android:id="@+id/clearBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clear" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
